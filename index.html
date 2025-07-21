@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Obligatorio - Programación 1</title>
+</head>
+
+<body>
+  <header>
+    <img src="img/logo.png" alt="Logo">
+    <nav id="navPrincipal">
+      <ul>
+        <li><a href="#" class="boton inicio" id="btnCliente">Cliente</a></li>
+        <li><a href="#" class="boton inicio" id="btnPaseador">Paseador</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="inicio" class="inicio">
+      <h1>¡Bienvenidos a ROMA!</h1>
+      <p>
+        Tu aliado confiable en el cuidado y paseo de tu mejor amigo en ROMA,
+        entendemos que tu perro es parte de tu familia. Por eso, ofrecemos un
+        servicio profesional, seguro y personalizado de paseos para perros,
+        adaptado a las necesidades de cada peludo y de su humano. Nuestro
+        equipo está formado por amantes de los animales, capacitados y
+        comprometidos con el bienestar, la actividad física y la felicidad de
+        tu mascota. Ya sea que trabajes todo el día, tengas una agenda
+        apretada o simplemente quieras que tu perro socialice y se ejercite
+        más, nosotros estamos aquí para ayudarte.
+      </p>
+      <img src="img/imagen-presentacion.png" alt="Imagen Presentacion.">
+    </section>
+    <section id="cliente" class="seccion">
+      <h2>Opciones de Cliente</h2>
+      <button class="boton cliente" id="btnSeccionClienteIniciarSesion">Iniciar Sesión</button>
+      <button class="boton cliente" id="btnSeccionClienteRegistrarse">Registrarse</button>
+      <button class="boton cliente" id="btnInicio">Volver</button>
+    </section>
+    <section id="paseador" class="seccion">
+      <h2>Opciones de Paseador</h2>
+      <button class="boton paseador" id="btnSeccionPaseadorIniciarSesion">Iniciar Sesión</button>
+      <button class="boton paseador" id="btnInicio">Volver</button>
+    </section>
+    <section id="seccionClienteIniciarSesion" class="seccion">
+      <h2>Iniciar Sesión - Cliente</h2>
+      <label for="txtUsuarioCliente">Ingrese su Usuario:</label>
+      <input type="text" id="txtUsuarioCliente">
+      <br>
+      <label for="txtContraCliente">Contraseña:</label>
+      <input type="password" id="txtContraCliente">
+      <br>
+      <p id="pAvisosCliente"></p>
+      <button id="btnIniciarSesionCliente">Iniciar Sesión</button>
+      <button class="boton cliente" id="btnCliente">Volver</button>
+    </section>
+    <section id="seccionClienteLogueado" class="seccion">
+      <h2>Panel de Cliente</h2>
+      <p id="pSesionIniciadaCliente"></p>
+      <button class="boton cliente" id="btnSeccionContratarPaseador">Contratar Paseador</button>
+      <button class="boton cliente" id="btnSeccionCancelarContratacion">Cancelar Contratacion</button>
+      <button class="boton cliente" id="btnSeccionCalificarPaseador">Calificar Paseadores</button>
+      <button class="boton cliente" id="btnSeccionTodoPaseadores">Lista de Paseadores</button>
+      <button id="btnCerrarSesionCliente">Cerrar Sesión</button>
+      
+    </section>
+    <section id="seccionCancelarContratacion" class="seccion">
+      <h3>Cancelar Contrataciones</h3>
+      <p id="pAvisosPaseadorContrataciones"></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Paseador Pendiente</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="tblCancelarContratacion"></tbody>
+      </table>
+      <button class="boton cliente" id="btnSeccionClienteLogueado">Volver a Opciones</button>
+      <br>
+    </section>
+    <section id="seccionClienteRegistrarse" class="seccion">
+      <h2>Registrarse - Cliente</h2>
+      <label for="txtUsuarioClienteReg">Ingrese su Usuario:</label>
+      <input type="text" id="txtUsuarioClienteReg">
+      <br>
+      <label for="txtContraClienteReg">Contraseña:</label>
+      <input type="password" id="txtContraClienteReg">
+      <br>
+      <label for="txtNombrePerroCliente">Nombre del Perro:</label>
+      <input type="text" id="txtNombrePerroCliente">
+      <br>
+      <label for="txtSizePerroCliente">Tamaño de su Perro</label>
+      <select id="txtSizePerroCliente">
+        <option value="Chico">Pequeño</option>
+        <option value="Mediano">Mediano</option>
+        <option value="Grande">Grande</option>
+      </select>
+      <br>
+      <p id="pAvisosClienteReg"></p>
+      <button id="btnRegistrarCliente">Registrar Cliente</button>
+      <button class="boton cliente" id="btnCliente">Volver</button>
+    </section>
+    <section id="seccionPaseadorIniciarSesion" class="seccion">
+      <h2>Iniciar Sesión - Paseador</h2>
+      <label for="txtUsuarioPaseador">Ingrese su Usuario:</label>
+      <input type="text" id="txtUsuarioPaseador">
+      <br>
+      <label for="txtContraPaseador">Contraseña:</label>
+      <input type="password" id="txtContraPaseador">
+      <br>
+      <p id="pAvisosPaseador"></p>
+      <button id="btnIniciarSesionPaseador">Iniciar Sesión</button>
+      <button class="boton paseador" id="btnPaseador">Volver</button>
+    </section>
+    <section id="seccionPaseadorLogueado" class="seccion">
+      <h2>Panel de Paseador</h2>
+      <p id="pSesionIniciadaPaseador"></p>
+      <button class="boton paseador" id="btnSeccionContrataciones">Ver Contrataciones</button>
+      <button class="boton paseador" id="btnSeccionPerrosAsignados">Mis Perros Asignados</button>
+      <button id="btnCerrarSesionPaseador">Cerrar Sesión</button>
+      
+    </section>
+    <section id="seccionContrataciones" class="seccion">
+      <h3>Contrataciones Pendientes</h3>
+      <p id="pAvisosPaseadorContrataciones"></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre del Perro</th>
+            <th>Usuario</th>
+            <th>Tamaño del Perro</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="tblContratacionesPendientes"></tbody>
+      </table>
+      <br>
+      <button class="boton paseador" id="btnSeccionPaseadorLogueado">
+        Volver a Opciones
+      </button>
+    </section>
+    <section id="seccionCalificarPaseador" class="seccion">
+      <h3>Calificar Paseador</h3>
+
+      <p id="nombreDelPaseadorCalificado"></p>
+      <label for="txtCalificarPaseador">Reseña: </label>
+      <input type="text" id="txtCalificarPaseador">
+      
+      <br>
+      <input type="button" id="Estrella1" value="☆">
+      <input type="button" id="Estrella2" value="☆">
+      <input type="button" id="Estrella3" value="☆">
+      <input type="button" id="Estrella4" value="☆">
+      <input type="button" id="Estrella5" value="☆">
+      
+      <label for="btnCalificarPaseador"></label>
+      <input type="button" id="btnCalificarPaseador" value="Enviar Calificación">
+       <button class="boton cliente" id="btnSeccionClienteLogueado">Volver a Opciones</button>
+       <p id="pRevisionPaseador"></p>
+      <table>
+        <tbody id="tblRevisionPaseador"></tbody>
+      </table>
+    </section>
+    <section id="seccionPerrosAsignados" class="seccion">
+      <h3>Perros Asignados</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre del Perro</th>
+            <th>Tamaño del Perro</th>
+            <th>Cliente</th>
+          </tr>
+        </thead>
+        <tbody id="tblPerrosAsignados"></tbody>
+      </table>
+      <p id="pTotalCuposMax"></p>
+      <p id="pPorcentajeCupos"></p>
+      <button class="boton paseador" id="btnSeccionPaseadorLogueado">
+        Volver a Opciones
+      </button>
+    </section>
+    <section id="seccionContratarPaseador" class="seccion">
+      <h2>Contratar Paseador</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre del Paseador</th>
+            <th>Cupo Disponible</th>
+            <th>Gestion</th>
+          </tr>
+        </thead>
+        <tbody id="tblPaseadoresDisponibles">
+        </tbody>
+      </table>
+      <button class="boton cliente" id="btnSeccionClienteLogueado">Volver</button>
+      <p id="pAvisosContratacion"></p>
+      <p id="pAvisosCliente"></p>
+    </section>
+    <section id="seccionTodoPaseadores" class="seccion">
+      <h2>Todos Los Paseadores</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre del Paseador</th>
+            <th>Cupo Disponible</th>
+          </tr>
+        </thead>
+        <tbody id="tblPaseadoresTotales">
+        </tbody>
+      </table>
+      <button class="boton cliente" id="btnSeccionClienteLogueado">Volver</button>
+      <p id="pAvisosContratacion"></p>
+      <p id="pAvisosCliente"></p>
+    </section>
+  </main>
+  <footer>
+    <a href="https://www.ort.edu.uy"><span>ROMA</span></a>
+    <nav>
+      <a href="https://x.com">
+        <img src="img/x.png" alt="x">
+      </a>
+      <a href="https://www.facebook.com">
+        <img src="img/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com">
+        <img src="img/instagram.png" alt="Instagram">
+      </a>
+    </nav>
+  </footer>
+  <script src="js/codigo.js"></script>
+</body>
+
+</html> 
